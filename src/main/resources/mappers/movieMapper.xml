@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="movieMapper">
+   
+   
+   <!-- 영화정보 넣기 -->
+<!--    <insert id="insert"> -->
+<!-- 	   INSERT INTO MP_BOARD(    TITLE  -->
+<!-- 	   					      , CONTENT  -->
+<!-- 	   					      , WRITER  ) -->
+<!-- 	                 VALUES(    #{title} -->
+<!-- 	                 		  , #{content} -->
+<!-- 	                 		  , #{writer}  ) -->
+   
+<!--    </insert> -->
+
+<!--    영화 정보 보기 리스트  -->
+   <select id="list" resultType="kr.co.vo.MovieVO">
+		 SELECT   	  m_num
+				   , m_title
+				   , m_director
+				   , m_actor
+				   , m_img
+			  FROM movie_tb
+			  ORDER BY m_num DESC
+	</select>
+	
+</mapper>

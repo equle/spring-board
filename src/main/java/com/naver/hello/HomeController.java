@@ -24,14 +24,14 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+//		logger.info("Welcome home! The client locale is {}.", locale);
+//		
+//		Date date = new Date();
+//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+//		
+//		String formattedDate = dateFormat.format(date);
+//		
+//		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
 	}
@@ -39,9 +39,9 @@ public class HomeController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello( Model model) {
 		//console log 찍는 부분
-		logger.info("hello.jsp로");
-		
-		model.addAttribute("strData", "world" );
+//		logger.info("hello.jsp로");
+//		
+//		model.addAttribute("strData", "world" );
 		
 		return "hello";
 	}
